@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Nhập vào số bông hồng" id="bonghoa"> <br>
+    <button type="button" onclick="KiemTra()" id="btn">Kiểm tra số tiền</button> <br>
+    <input type="number2" placeholder="Nhập vào số tiền mua hoa" id="tien"> <br>
+    <button type="button" onclick="money()" id="btn2">Kiểm tra số bông hoa</button>
+    <script>
+        function KiemTra() {
+            let a = (document.getElementById("bonghoa")).value;
+            if(a <= 10){
+                sum = a * 15000;
+                result = "Số tiền cần trả là " + sum + " đồng";
+            }
+            if(10 < a < 21){
+                sum = 150000 + (a - 10) * 13500;
+                result = "Số tiền cần trả là " + sum + " đồng";
+            }
+            if(a > 20){
+                sum = 285000 + (a - 20) * 10800;
+                result = "Số tiền cần trả là " + sum + " đồng";
+            }
+            document.getElementById("btn").innerHTML = result;
+        }
+
+        function money() {
+            let b = (document.getElementById("tien")).value;
+            if(b <= 150000){
+                c = b / 15000;
+                result = "Số bông hoa đã mua là " + c + " bông";
+            }
+            if(150000 < b <= 285000){
+                c = (b - 150000) / 13500 + 10;
+                result = "Số bông hoa đã mua là " + c + " bông";
+            }
+            if(b > 285000){
+                c = (b - 285000) / 10800 + 20;
+                result = "Số bông hoa đã mua là " + c + " bông";
+            }
+            document.getElementById("btn2").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
