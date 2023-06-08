@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tính điểm đại học khối D</h1>
+    <form>
+        <p>Môn Toán <input type="number" id="toan"></p>
+        <p>Môn Văn <input type="number" id="van"></p>
+        <p>Môn Anh <input type="number" id="anh"></p>
+        <p>Khu vực <select name="" id="kv">
+                <option value="0.75" id="kv1">KV1</option>
+                <option value="0.25" id="kv2">KV2</option>
+                <option value="0.5" id="kv2nt">KV2-NT</option>
+                <option value="0" id="kv3">KV3</option>
+            </select></p>
+    </form>
+
+    <button type="button" id="btn" onclick="CheckPoint()">Tính điểm</button>
+
+
+    <script>
+        function CheckPoint() {
+            let t = +document.getElementById("toan").value;
+            let v = +document.getElementById("van").value;
+            let a = +document.getElementById("anh").value;
+            let sum = +document.getElementById("kv").value;
+            switch(sum) {
+                case 0.75:
+                    result = t + v + a + 0.75;
+                    break;
+                case 0.25:
+                    result = t + v + a + 0.25;
+                    break;
+                case 0.5:
+                    result = t + v + a + 0.5;
+                    break;
+                case 0:
+                    result = t + v + a;
+                    break;
+            }
+        document.getElementById("btn").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
