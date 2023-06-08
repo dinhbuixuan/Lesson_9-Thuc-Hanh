@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("Nhập vào số cân nặng của bạn theo kilogam"));
+        let b = Number(prompt("Nhập vào chiều cao của bạn theo mét"));
+        let bmi = a / b;
+        console.log(bmi);
+        console.log(a);
+        console.log(b);
+        if(bmi < 16){
+            result = "Bạn gầy cấp độ III";
+        }
+        if(16 <= bmi < 17){
+            result = "Bạn gầy cấp độ II";
+        }
+        if(17 <= bmi < 18.5){
+            result = "Bạn gầy cấp độ I";
+        }
+        if(18.5 <= bmi < 25){
+            result = "Bạn bình thường";
+        }
+        if(25 <= bmi < 30){
+            result = "Bạn thừa cân";
+        }
+        if(30 <= bmi < 35){
+            result = "Bạn béo phì độ I";
+        }
+        if(35 <= bmi < 40){
+            result = "Bạn béo phì độ II";
+        }
+        if(bmi >= 40){
+            result = "Bạn béo phì độ III";
+        }
+        alert(result);
+    </script>
+</body>
+</html>
