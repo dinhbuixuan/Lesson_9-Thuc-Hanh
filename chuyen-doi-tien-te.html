@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 50%;
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+        #btn {
+            height: 30px;
+            background-color: rgb(164, 120, 205);
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+     <div class="box1">
+        <p>Amount</p>
+        <input type="number" name="1" id="TienTe">
+     </div>
+     <div class="box2">
+        <form>
+            <p>From Currency</p>
+            <select name="" id="currency1">
+                <option value="23000" selected>VietNam</option>
+                <option value="1">USD</option>
+                <option value="0.95">Euro</option>
+            </select>
+        </form>
+     </div>
+    <div class="box3">
+        <form>
+            <p>To Currency</p>
+            <select name="" id="currency2">
+                <option value="23000">VietNam</option>
+                <option value="1" selected>USD</option>
+                <option value="0.95">Euro</option>
+            </select>
+        </form>
+    </div>
+    <button id="btn" onclick="check()">Convert</button>
+    </div>
+    
+    <script>
+        function check() {
+            let currency1 = document.getElementById("currency1").value;
+            let currency2 = document.getElementById("currency2").value;
+            let num = document.getElementById("TienTe").value;
+
+            result = num * currency2 / currency1;
+
+            document.getElementById("btn").innerHTML = "Result: " + result;
+        }
+    
+    </script>
+</body>
+
+</html>
